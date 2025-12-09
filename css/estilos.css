@@ -1,0 +1,148 @@
+body,html{
+	height: 100%;
+	width: 100%;
+}
+.main-container{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.main-container > .login,
+.main-container > .hero-body{
+	height: auto;
+	width: 100%;
+	max-width: 400px;
+	min-width: 300px;
+}
+
+.form-inline{
+	display: inline-flex;
+}
+
+/* ===== NAVBAR ESTILO WEBPLAYER ===== */
+
+/* 1. Fondo azul oscuro elegante */
+.navbar.is-dark {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+    min-height: 3.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 2. Texto blanco para todo */
+.navbar-item, 
+.navbar-link {
+    color: white !important;
+}
+
+/* Navbar text: dropdown items black by default, white on hover; top-level links stay white */
+.navbar.is-dark .navbar-link .nav-text {
+    color: #fff !important;
+}
+.navbar.is-dark .navbar-dropdown .nav-text {
+    color: #111 !important;
+}
+.navbar.is-dark .navbar-dropdown .navbar-item:hover .nav-text {
+    color: #fff !important;
+}
+
+.navbar-burger {
+    color: white;
+}
+
+/* Caret (dropdown arrow) color: black by default, white on hover/active */
+.navbar.is-dark .navbar-link::after {
+    border-top-color: #111 !important;
+}
+.navbar.is-dark .navbar-link:hover::after,
+.navbar.is-dark .navbar-link.is-active::after {
+    border-top-color: #fff !important;
+}
+
+.navbar-burger span {
+    background-color: white;
+}
+
+/* 3. Iconos azul claro */
+.navbar-item i {
+    color: #4fc3f7 !important;
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+/* 4. Efecto hover azul suave */
+.navbar-item:hover,
+.navbar-link:hover {
+    background-color: rgba(79, 195, 247, 0.15) !important;
+}
+
+/* 5. Dropdown con fondo oscuro */
+.navbar-dropdown {
+    background-color: #1a1a2e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-dropdown .navbar-item {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Default: show dark text on navbar (not hovered), then white on hover */
+.navbar.is-dark .navbar-item,
+.navbar.is-dark .navbar-link{
+    color: #0a0a0a !important;
+}
+.navbar.is-dark .navbar-item:hover,
+.navbar.is-dark .navbar-link:hover{
+    color: #ffffff !important;
+}
+
+.navbar-dropdown .navbar-item:hover {
+    background-color: rgba(79, 195, 247, 0.15) !important;
+    color: white !important;
+}
+
+/* 6. Botones bonitos */
+.navbar-end .button.is-primary {
+    background-color: #3273dc;
+    border-color: #3273dc;
+    color: white;
+}
+
+.navbar-end .button.is-primary:hover {
+    background-color: #276cda;
+}
+
+.navbar-end .button.is-danger {
+    background-color: #ff3860;
+    border-color: #ff3860;
+}
+
+.navbar-end .button.is-light {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-end .button.is-light:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 7. Logo con ícono de música */
+.navbar-brand .navbar-item i {
+    font-size: 1.5rem;
+    color: #4fc3f7;
+}
+
+.navbar-brand .navbar-item strong {
+    margin-left: 8px;
+}
+
+/* Ensure dropdown item text is visible even if icon styles interfere */
+.nav-text{
+    display: inline-block;
+    color: inherit !important;
+    margin-left: 8px;
+    vertical-align: middle;
+}
