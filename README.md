@@ -101,19 +101,3 @@ Usuario administrador por defecto (según volcado):
 # Permitir sólo archivos estáticos
 Options -ExecCGI
 ```
-
-- Valida y sanea todos los datos en servidores (ya usamos `limpiar_cadena()` y prepared statements para queries).
-- Considera añadir CSRF tokens a los formularios si expones el sistema públicamente.
-- Usa HTTPS en producción.
-
-## Notas de desarrollo y próximos pasos sugeridos
-- Mejorar manejo de roles/permiso (el flujo actual usa `$_SESSION['id']` y un `admin` duro con id==1 en algunos checks).
-- Añadir endpoint para registrar reproducciones en `play_history` desde el reproductor (JS) si quieres historial real por usuario.
-- Añadir protección de uploads y límites más estrictos según tus necesidades.
-
-Si quieres, puedo:
-- Agregar `.htaccess` automáticamente a las carpetas `uploads/`.
-- Crear el endpoint de logging de reproducciones y el llamado JS desde el reproductor.
-- Añadir control de roles/permisos más completo.
-
-Indícame cuál de esas tareas quieres que haga a continuación.
