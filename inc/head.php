@@ -1,3 +1,8 @@
+<?php
+# Archivo: head.php
+# Propósito: Inclusiones en el <head> (CSS, meta tags, título)
+# Nota: Usar rutas relativas para portabilidad del proyecto
+?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WebPlayer - Sistema de Música</title>

@@ -1,3 +1,8 @@
+<?php
+# Archivo: navbar.php
+# Propósito: Barra de navegación principal (menú, enlaces a vistas)
+# Nota: Usar rutas relativas `index.php?vista=...` para compatibilidad
+?>
 <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
 
     <div class="navbar-brand">
@@ -99,6 +104,23 @@
                     </a>
                     <a href="index.php?vista=album_search" class="navbar-item">
                         <i class="fas fa-search"></i><span class="nav-text">Canciones por Álbum</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    <i class="fas fa-tag"></i><span class="nav-text">Géneros</span>
+                </a>
+                <div class="navbar-dropdown">
+                    <a href="index.php?vista=genero_new" class="navbar-item">
+                        <i class="fas fa-plus-circle"></i><span class="nav-text">Nuevo Género</span>
+                    </a>
+                    <a href="index.php?vista=genero_list" class="navbar-item">
+                        <i class="fas fa-list"></i><span class="nav-text">Lista de Géneros</span>
+                    </a>
+                    <a href="index.php?vista=genero_search" class="navbar-item">
+                        <i class="fas fa-search"></i><span class="nav-text">Buscar por Género</span>
                     </a>
                 </div>
             </div>

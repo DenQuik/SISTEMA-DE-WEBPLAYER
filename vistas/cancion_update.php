@@ -1,4 +1,8 @@
-<?php require_once __DIR__ . '/../inc/main.php'; ?>
+<?php
+# Archivo: cancion_update.php
+# Propósito: Formulario para editar datos de una canción
+require_once __DIR__ . '/../inc/main.php';
+?>
 <?php
     $cancion_id = (int)($_GET['cancion_id_up'] ?? 0);
     $db = conexion();

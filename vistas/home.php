@@ -1,3 +1,7 @@
+<?php
+# Archivo: home.php
+# Propósito: Vista principal con bienvenida y listado de últimas canciones
+?>
 <div class="container is-fluid">
 	<h1>­</h1>
 	<h1 class="title">Home este es el primer cambio para ver si se sube al github</h1>
@@ -5,7 +9,7 @@
 </div>
 
 <?php
-// Mostrar las últimas canciones (proxy de "reproducidas" usando cancion_id desc)
+# Mostrar las últimas canciones (proxy de "reproducidas" usando cancion_id desc) #
 require_once __DIR__ . '/../inc/main.php';
 $db = conexion();
 $ultimas = $db->query("SELECT c.cancion_id, c.cancion_titulo, a.artista_nombre FROM cancion c LEFT JOIN artista a ON c.artista_id=a.artista_id ORDER BY c.cancion_id DESC LIMIT 6");

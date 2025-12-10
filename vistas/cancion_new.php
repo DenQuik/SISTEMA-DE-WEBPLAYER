@@ -1,4 +1,7 @@
-<?php require_once __DIR__ . '/../inc/main.php'; ?>
+<?php
+# Archivo: cancion_new.php
+# Propósito: Formulario para crear una nueva canción (subir audio y portada)
+require_once __DIR__ . '/../inc/main.php'; ?>
 <div class="container is-fluid mb-6">
     <h1>­</h1>
     <h1 class="title">Canciones</h1>

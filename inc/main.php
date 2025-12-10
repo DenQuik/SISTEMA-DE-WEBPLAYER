@@ -1,5 +1,8 @@
 <?php
-	
+# Archivo: main.php
+# Propósito: Funciones auxiliares comunes (conexion, validaciones, helpers)
+# Contiene: conexion(), verificar_datos(), limpiar_cadena(), renombrar_fotos(), paginador_tablas()
+
 	# Conexion a la base de datos #
 	function conexion(){
 		$pdo = new PDO('mysql:host=localhost;dbname=webplayer', 'root', '');
@@ -109,4 +112,13 @@
 
 		$tabla.='</nav>';
 		return $tabla;
+	}
+
+	# Funciones de alerta reutilizables: devuelven fragmentos HTML
+	function success_alert($msg){
+		return '<div class="notification is-info is-light"><strong>¡Éxito!</strong><br>'.htmlspecialchars($msg).'</div>';
+	}
+
+	function error_alert($msg){
+		return '<div class="notification is-danger is-light"><strong>¡Ocurrió un error!</strong><br>'.htmlspecialchars($msg).'</div>';
 	}

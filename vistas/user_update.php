@@ -1,7 +1,9 @@
 <?php
+# Archivo: user_update.php
+# Propósito: Formulario para actualizar datos de un usuario (validación admin requerida)
 	require_once "./inc//main.php";
 
-    $id = (isset($_GET['user_id_up'])) ? $_GET['user_id_up'] : 0;
+	$id = (isset($_GET['user_id_up'])) ? $_GET['user_id_up'] : 0;
     $id=limpiar_cadena($id);
 ?>
 <div class="container is-fluid mb-6">

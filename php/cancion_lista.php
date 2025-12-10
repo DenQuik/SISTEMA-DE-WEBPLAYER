@@ -1,4 +1,9 @@
 <?php
+# Archivo: cancion_lista.php
+# Propósito: Genera la lista paginada de canciones para la vista administrativa
+# Entrada: parámetros de paginación por GET (ej. $pagina, $registros, $busqueda)
+# Salida: HTML con la tabla/lista de canciones
+# Realiza dos consultas: una para los datos y otra para el total (paginación) #
     $inicio = ($pagina>0) ? (($pagina * $registros)-$registros) : 0;
     $tabla = "";
 

@@ -6,6 +6,10 @@
     $url = 'index.php?vista=cancion_list&pagina=';
 
 ?>
+<?php
+# Archivo: cancion_list.php
+# Propósito: Vista para listar canciones (tabla paginada en admin)
+?>
 <div class="container is-fluid mb-6">
     <h1>­</h1>
     <h1 class="title">Canciones</h1>

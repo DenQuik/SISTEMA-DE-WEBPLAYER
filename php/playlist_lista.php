@@ -1,4 +1,8 @@
 <?php
+# Archivo: playlist_lista.php
+# Propósito: Genera la lista paginada de playlists para vistas administrativas
+# Entrada: parámetros de paginación por GET
+# Salida: HTML con la tabla/lista de playlists
     $inicio = ($pagina>0) ? (($pagina * $registros)-$registros) : 0;
     $tabla = "";
 

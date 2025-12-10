@@ -12,6 +12,10 @@ if($selected>0){
 }
 $db = null;
 ?>
+<?php
+# Archivo: playlist_search.php
+# Propósito: Interfaz para buscar/seleccionar una playlist y agregar/remover canciones
+?>
 <div class="container is-fluid mb-6">
     <h1>­</h1>
     <h1 class="title">Buscar/Administrar Playlist</h1>

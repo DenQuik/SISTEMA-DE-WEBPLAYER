@@ -1,5 +1,9 @@
 <?php
-	/*== Almacenando datos ==*/
+# Archivo: iniciar_sesion.php
+# Propósito: Autentica un usuario y establece variables de sesión
+# Entrada: `login_usuario` y `login_clave` por POST
+# Salida: redirección a `home` o notificación HTML en caso de error
+    /*== Almacenando datos ==*/
     $usuario=limpiar_cadena($_POST['login_usuario']);
     $clave=limpiar_cadena($_POST['login_clave']);
 
@@ -17,6 +21,7 @@
 
 
     /*== Verificando integridad de los datos ==*/
+    # Verificar formato de usuario y clave antes de consultar BD #
     if(verificar_datos("[a-zA-Z0-9]{4,20}",$usuario)){
         echo '
             <div class="notification is-danger is-light">
@@ -38,6 +43,7 @@
     }
 
 
+    # Comprobar credenciales en la base de datos #
     $check_user=conexion();
     $check_user=$check_user->query("SELECT * FROM usuario WHERE usuario_usuario='$usuario'");
     if($check_user->rowCount()==1){

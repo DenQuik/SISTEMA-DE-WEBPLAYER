@@ -1,3 +1,7 @@
+<?php
+# Archivo: script.php
+# Propósito: Inclusión de scripts y comportamiento del frontend (hamburguesa, AJAX)
+?>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
 

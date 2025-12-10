@@ -1,3 +1,7 @@
+<?php
+# Archivo: login.php
+# Propósito: Formulario de login y manejo de envío (incluye iniciar_sesion.php)
+?>
 <div class="main-container">
 
 	<form class="box login" action="" method="POST" autocomplete="off">

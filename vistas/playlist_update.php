@@ -1,4 +1,8 @@
-<?php require_once __DIR__ . '/../inc/main.php'; ?>
+<?php
+# Archivo: playlist_update.php
+# Propósito: Formulario para editar datos de una playlist existente
+require_once __DIR__ . '/../inc/main.php';
+?>
 <?php
     $playlist_id = (int)($_GET['playlist_id_up'] ?? 0);
     $db = conexion();

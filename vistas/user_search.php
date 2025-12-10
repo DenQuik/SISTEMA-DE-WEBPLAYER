@@ -1,3 +1,7 @@
+<?php
+# Archivo: user_search.php
+# Propósito: Buscar usuarios y mostrar resultados paginados
+?>
 <div class="container is-fluid mb-6">
     <h1>­</h1>
     <h1 class="title">Usuarios</h1>

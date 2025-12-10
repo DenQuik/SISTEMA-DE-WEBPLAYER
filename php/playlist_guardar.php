@@ -1,4 +1,8 @@
 <?php
+    # Archivo: playlist_guardar.php
+    # Propósito: Crea una nueva playlist y guarda portada si se envía
+    # Entrada: datos por POST y FILES
+    # Salida: HTML de notificación para `FormularioAjax`
     require_once __DIR__ . '/../inc/session_start.php';
     require_once __DIR__ . '/../inc/main.php';
 
@@ -17,6 +21,7 @@
     }
 
     $ruta_foto = '';
+    # Guardar foto de la playlist si se envía (validar tipo y tamaño) #
     if(isset($_FILES['playlist_foto']) && $_FILES['playlist_foto']['error']===0){
         $file = $_FILES['playlist_foto'];
         $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
@@ -31,6 +36,7 @@
         }
     }
 
+    # Insertar nueva playlist en BD (nombre, descripcion, foto, usuario) #
     $db = conexion();
     $stmt = $db->prepare("INSERT INTO playlist(playlist_nombre,playlist_descripcion,playlist_foto,usuario_id) VALUES(:nombre,:descripcion,:foto,:usuario)");
     $params = [':nombre'=>$nombre,':descripcion'=>$descripcion,':foto'=>$ruta_foto,':usuario'=>$usuario];

@@ -1,4 +1,9 @@
 <?php
+# Archivo: usuario_lista.php
+# Propósito: Genera la lista paginada de usuarios para la vista administrativa
+# Entrada: parámetros de paginación por GET
+# Salida: HTML con la tabla/lista de usuarios
+	# Consulta de datos y conteo total para paginación #
 	$inicio = ($pagina>0) ? (($pagina * $registros)-$registros) : 0;
 	$tabla="";
 

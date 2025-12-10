@@ -1,4 +1,9 @@
 <?php
+# Archivo: buscador.php
+# Propósito: Procesa búsquedas (formulario) y devuelve resultados HTML
+# Entrada: parámetros por GET/POST según el formulario
+# Salida: HTML con la lista de resultados
+
 	$modulo_buscador=limpiar_cadena($_POST['modulo_buscador']);
 
 	$modulos=["usuario","categoria","producto"];

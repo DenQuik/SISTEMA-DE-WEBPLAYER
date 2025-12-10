@@ -1,7 +1,11 @@
 <?php
-	require_once "../inc/session_start.php";
+# Archivo: usuario_actualizar.php
+# Propósito: Actualiza los datos de un usuario (requiere validación de admin)
+# Entrada: datos de usuario y credenciales de admin por POST
+# Salida: HTML de notificación para `FormularioAjax` o redirección
+    require_once "../inc/session_start.php";
 
-	require_once "../inc/main.php";
+    require_once "../inc/main.php";
 
     /*== Almacenando id ==*/
     $id=limpiar_cadena($_POST['usuario_id']);
@@ -63,6 +67,8 @@
 
 
     /*== Verificando el administrador en DB ==*/
+    /*== Verificando el administrador en DB ==*/
+    # Comprobar que las credenciales del administrador coincidan antes de actualizar usuario #
     $check_admin=conexion();
     $check_admin=$check_admin->query("SELECT usuario_usuario,usuario_clave FROM usuario WHERE usuario_usuario='$admin_usuario' AND usuario_id='".$_SESSION['id']."'");
     if($check_admin->rowCount()==1){
@@ -219,6 +225,7 @@
 
 
     /*== Actualizar datos ==*/
+    # Ejecutar UPDATE en la tabla usuario con los nuevos datos #
     $actualizar_usuario=conexion();
     $actualizar_usuario=$actualizar_usuario->prepare("UPDATE usuario SET usuario_nombre=:nombre,usuario_apellido=:apellido,usuario_usuario=:usuario,usuario_clave=:clave,usuario_email=:email WHERE usuario_id=:id");
 

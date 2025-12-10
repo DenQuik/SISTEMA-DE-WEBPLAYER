@@ -1,6 +1,11 @@
+/* Archivo: estilos.css
+   Propósito: Estilos personalizados sobre Bulma para WebPlayer
+   Contiene reglas para: layout principal, navbar, dropdowns y botones
+*/
+
 body,html{
-	height: 100%;
-	width: 100%;
+    height: 100%;
+    width: 100%;
 }
 .main-container{
 	height: 100%;

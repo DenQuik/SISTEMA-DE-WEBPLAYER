@@ -4,6 +4,10 @@
     <h2 class="subtitle">Crear una cuenta</h2>
     <a href="index.php?vista=login" class="button is-link is-rounded is-pulled-right">Regresar al login</a> 
 </div>
+<?php
+# Archivo: register.php
+# Propósito: Formulario de registro de nuevos usuarios
+?>
 <div class="container pb-6 pt-6">
 
     <div class="form-rest mb-6 mt-6"></div>

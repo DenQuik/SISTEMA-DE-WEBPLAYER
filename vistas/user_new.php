@@ -1,4 +1,9 @@
+<?php
+# Archivo: user_new.php
+# Propósito: Formulario para crear un nuevo usuario
+?>
 <div class="container is-fluid mb-6">
+	<h1>­</h1>
 	<h1 class="title">Usuarios</h1>
 	<h2 class="subtitle">Nuevo usuario</h2>
 </div>

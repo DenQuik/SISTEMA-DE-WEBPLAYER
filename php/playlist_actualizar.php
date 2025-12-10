@@ -1,4 +1,8 @@
 <?php
+# Archivo: playlist_actualizar.php
+# Propósito: Actualiza los datos de una playlist (titulo, portadas, etc.)
+# Entrada: datos por POST y FILES opcionalmente
+# Salida: HTML de notificación para `FormularioAjax`
     require_once __DIR__ . '/../inc/session_start.php';
     require_once __DIR__ . '/../inc/main.php';
 
@@ -20,6 +24,7 @@
         exit();
     }
 
+    # Preparar ruta de la foto actual; si se sube nueva se reemplaza #
     $ruta_foto = $datos['playlist_foto'];
     if(isset($_FILES['playlist_foto']) && $_FILES['playlist_foto']['error']===0){
         $file = $_FILES['playlist_foto'];

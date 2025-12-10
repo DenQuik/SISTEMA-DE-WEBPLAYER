@@ -1,6 +1,12 @@
 <?php
-require_once __DIR__ . '/../inc/session_start.php';
-require_once __DIR__ . '/../inc/main.php';
+    # Archivo: playlist_cancion_guardar.php
+    # Propósito: Añade una canción a una playlist (inserta en playlist_cancion)
+    # Entrada: playlist_id y cancion_id por POST
+    # Salida: HTML de notificación para `FormularioAjax`
+    require_once __DIR__ . '/../inc/session_start.php';
+    require_once __DIR__ . '/../inc/main.php';
+
+    # Verificar que playlist y canción sean válidas antes de insertar #
 
 $playlist_id = (int)($_POST['playlist_id'] ?? 0);
 $cancion_id = (int)($_POST['cancion_id'] ?? 0);
@@ -11,6 +17,7 @@ if($playlist_id<=0 || $cancion_id<=0){
 }
 
 $db = conexion();
+
 // verificar existencia
 $check = $db->query("SELECT playlist_id FROM playlist WHERE playlist_id='$playlist_id'");
 if($check->rowCount()<=0){

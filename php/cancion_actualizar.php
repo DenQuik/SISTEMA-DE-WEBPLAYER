@@ -1,5 +1,9 @@
 <?php
     require_once __DIR__ . '/../inc/session_start.php';
+    # Archivo: cancion_actualizar.php
+    # Propósito: Actualiza los datos o archivos de una canción en la base de datos
+    # Entrada: datos por POST y archivos por FILES (portada, audio)
+    # Salida: HTML de notificación para `FormularioAjax`
     require_once __DIR__ . '/../inc/main.php';
 
     $id = (int) ($_POST['cancion_id'] ?? 0);
@@ -30,6 +34,7 @@
     }
 
     $ruta_audio = $datos['cancion_archivo'];
+    # Si se envía nuevo archivo de audio, reemplazar el anterior #
     if(isset($_FILES['cancion_archivo']) && $_FILES['cancion_archivo']['error']===0){
         $file = $_FILES['cancion_archivo'];
         $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
@@ -49,6 +54,7 @@
     }
 
     $ruta_portada = $datos['cancion_foto'];
+    # Si se envía nueva portada, reemplazar la existente #
     if(isset($_FILES['cancion_foto']) && $_FILES['cancion_foto']['error']===0){
         $file = $_FILES['cancion_foto'];
         $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));

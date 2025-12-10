@@ -1,8 +1,13 @@
 <?php
+    # Archivo: cancion_eliminar.php
+    # Propósito: Elimina una canción y sus archivos asociados del servidor y BD
+    # Entrada: identificador de canción por POST
+    # Salida: HTML de notificación para `FormularioAjax`
     /*== Almacenando datos ==*/
     $cancion_id_del = limpiar_cadena($_GET['cancion_id_del'] ?? '');
 
     /*== Verificando existencia ==*/
+    # Eliminar archivos físicos (audio/portada) si existen y luego eliminar registro BD #
     $check = conexion();
     $check = $check->query("SELECT cancion_archivo,cancion_foto FROM cancion WHERE cancion_id='$cancion_id_del'");
     if($check->rowCount()==1){

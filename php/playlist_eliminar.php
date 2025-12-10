@@ -1,5 +1,10 @@
 <?php
+    # Archivo: playlist_eliminar.php
+    # Propósito: Elimina una playlist y su portada asociada si aplica
+    # Entrada: playlist_id por POST
+    # Salida: HTML de notificación para `FormularioAjax`
     $playlist_id_del = limpiar_cadena($_GET['playlist_id_del'] ?? '');
+    # Eliminar playlist: borrar foto física (si existe) y registro en BD #
 
     $check = conexion();
     $check = $check->query("SELECT playlist_foto FROM playlist WHERE playlist_id='$playlist_id_del'");

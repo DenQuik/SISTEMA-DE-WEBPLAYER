@@ -1,3 +1,7 @@
+<?php
+# Archivo: playlist_new.php
+# Propósito: Formulario para crear una nueva playlist (nombre, descripcion, foto)
+?>
 <?php require_once __DIR__ . '/../inc/main.php'; ?>
 <div class="container is-fluid mb-6">
     <h1>­</h1>

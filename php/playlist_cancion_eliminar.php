@@ -1,4 +1,8 @@
 <?php
+# Archivo: playlist_cancion_eliminar.php
+# Propósito: Elimina la asociación canción-playlist (tabla playlist_cancion)
+# Entrada: playlist_id y cancion_id por POST
+# Salida: HTML de notificación para `FormularioAjax`
 require_once __DIR__ . '/../inc/session_start.php';
 require_once __DIR__ . '/../inc/main.php';
 

@@ -1,4 +1,6 @@
 <?php
+# Archivo: playlist_list.php
+# Propósito: Vista que muestra la lista de playlists (paginada)
     $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
     $registros = 10;
     $busqueda = $_GET['busqueda'] ?? '';

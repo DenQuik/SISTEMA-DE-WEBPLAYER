@@ -1,4 +1,8 @@
 <?php
+# Archivo: usuario_guardar.php
+# Propósito: Registra un nuevo usuario en la base de datos
+# Entrada: campos por POST (nombre, usuario, email, claves)
+# Salida: HTML de notificación compatible con `FormularioAjax`
     
     require_once "../inc/main.php";
 
@@ -14,6 +18,7 @@
 
 
     /*== Verificando campos obligatorios ==*/
+    # Validar campos requeridos y formatos antes de insertar en BD #
     if($nombre=="" || $apellido=="" || $usuario=="" || $clave_1=="" || $clave_2==""){
         echo '
             <div class="notification is-danger is-light">
@@ -124,6 +129,7 @@
 
 
     /*== Guardando datos ==*/
+    # Preparar y ejecutar INSERT en tabla `usuario` #
     $guardar_usuario=conexion();
     $guardar_usuario=$guardar_usuario->prepare("INSERT INTO usuario(usuario_nombre,usuario_apellido,usuario_usuario,usuario_clave,usuario_email) VALUES(:nombre,:apellido,:usuario,:clave,:email)");
 

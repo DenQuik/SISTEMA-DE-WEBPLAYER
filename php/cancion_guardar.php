@@ -1,4 +1,8 @@
 <?php
+    # Archivo: cancion_guardar.php
+    # Propósito: Recibe formulario para crear una nueva canción y guarda archivos (audio/portada)
+    # Entrada: campos por POST y archivos por FILES
+    # Salida: HTML de notificación compatible con `FormularioAjax`
     require_once __DIR__ . '/../inc/session_start.php';
     require_once __DIR__ . '/../inc/main.php';
 
@@ -15,12 +19,13 @@
         exit();
     }
 
-    if(verificar_datos("[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{2,100}", $titulo)){
+    if(verificar_datos("[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{2,100}", $titulo)){
         echo '<div class="notification is-danger is-light"><strong>¡Ocurrio un error inesperado!</strong><br>Titulo no valido</div>';
         exit();
     }
 
     /*== Manejo de archivos ==*/
+    # Guardar archivo de audio (verifica extensión y tamaño) #
     $ruta_audio = '';
     if(isset($_FILES['cancion_archivo']) && $_FILES['cancion_archivo']['error']===0){
         $file = $_FILES['cancion_archivo'];
@@ -49,6 +54,7 @@
     }
 
     $ruta_portada = '';
+    # Guardar portada si se envía (imagen pequeña) #
     if(isset($_FILES['cancion_foto']) && $_FILES['cancion_foto']['error']===0){
         $file = $_FILES['cancion_foto'];
         $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));

@@ -1,10 +1,15 @@
 <?php
+# Archivo: usuario_eliminar.php
+# Propósito: Elimina un usuario del sistema
+# Entrada: `user_id_del` por GET
+# Salida: HTML de notificación para `FormularioAjax`
 
 	/*== Almacenando datos ==*/
-    $user_id_del=limpiar_cadena($_GET['user_id_del']);
+	$user_id_del=limpiar_cadena($_GET['user_id_del']);
 
-    /*== Verificando usuario ==*/
-    $check_usuario=conexion();
+	/*== Verificando usuario ==*/
+	# Verificar existencia y dependencias antes de eliminar (productos) #
+	$check_usuario=conexion();
     $check_usuario=$check_usuario->query("SELECT usuario_id FROM usuario WHERE usuario_id='$user_id_del'");
     
     if($check_usuario->rowCount()==1){
